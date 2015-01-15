@@ -91,10 +91,13 @@ void test_to_find_the_next_character_of_each_element_of_an_array(){
 }
 
 void test_to_find_the_legth_of_each_string_element_of_an_array(){
-	char *array[] = {"suparna","abir"};
+	char *array[] = {"suparna","abir","sujit","rakhee"};
 	void (*p)(char*,int,char**);
 	p = &my_strlen;
-	assertEqual(for_each_string(array,2,p), 1);
+	assertEqual(for_each_string(array,4,p), 1);
 	assertEqual(array[0],7);
 	assertEqual(array[1],4);
+	assertEqual(array[2],5);
+	assertEqual(array[3],6);
+
 }
